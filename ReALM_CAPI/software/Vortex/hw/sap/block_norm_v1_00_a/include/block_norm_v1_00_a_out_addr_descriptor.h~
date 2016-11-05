@@ -1,0 +1,52 @@
+#ifndef __block_norm_V1_00_A_OUT_ADDR_CONFIG_H__
+#define __block_norm_V1_00_A_OUT_ADDR_CONFIG_H__
+
+#include <VortexTypes.h>
+#include "VortexImageDescriptor.h"
+
+typedef struct st_block_norm_v1_00_a_out_addr_descriptor{
+  uint64_t NormAddr;
+  uint16_t NormMemID;
+  uint64_t DotpAddr;
+  uint16_t DotpMemID;
+  uint8_t Bytes[16];
+  uint8_t* GetBytes()
+  {
+    *((uint64_t*)&Bytes[0]) = (
+			       (((uint64_t) NormAddr & 0xFFFFFFFFFul) << 0) |
+			       (((uint64_t) NormMemID & 0xFF) << 48));
+    *((uint64_t*)&Bytes[8]) = (
+			       (((uint64_t) DotpAddr & 0xFFFFFFFFFul) << 0) |
+			       (((uint64_t) DotpMemID & 0xFF) << 48));
+    return Bytes;
+  } 
+} BlockNormOutAddrConfig;
+
+class block_norm_v1_00_a_out_addr_descriptor : public IVortexConfiguration
+{
+public:
+	//block_norm_v1_00_a_out_addr_descriptor(uint8_t Width, uint8_t Height);
+	block_norm_v1_00_a_out_addr_descriptor(void);
+	~block_norm_v1_00_a_out_addr_descriptor(void);
+	
+	uint64_t GetNormAddr();
+	void SetNormAddr(uint64_t value);
+	uint16_t GetNormMemID();
+	void SetNormMemID(uint16_t value);
+	uint64_t GetDotpAddr();
+	void SetDotpAddr(uint64_t value);
+	uint16_t GetDotpMemID();
+	void SetDotpMemID(uint16_t value);
+	
+	VortexEntityType GetConfigurationType();
+	void SetConfigurationType(VortexEntityType ConfigType);
+	uint64_t GetIndex();
+	void SetIndex(uint64_t Index);
+	VortexConfigurationPacket* GetConfiguration();
+
+private:
+	VortexConfigurationPacket* m_Vcp;
+	BlockNormOutAddrConfig m_config;
+};
+
+#endif // !1

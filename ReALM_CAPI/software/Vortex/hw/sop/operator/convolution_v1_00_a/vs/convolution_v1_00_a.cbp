@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="convolution_v1_00_a" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_sim">
+				<Option output="convolution_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Debug_hw">
+				<Option output="convolution_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="convolution_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option external_deps=";" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Unit filename="../include/convolution_v1_00_a.h" />
+		<Unit filename="../src/convolution_v1_00_a.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

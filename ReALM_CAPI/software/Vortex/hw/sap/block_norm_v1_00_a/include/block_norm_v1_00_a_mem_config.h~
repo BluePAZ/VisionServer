@@ -1,0 +1,58 @@
+#ifndef __block_norm_V1_00_A_MEM_CONFIG_H__
+#define __block_norm_V1_00_A_MEM_CONFIG_H__
+
+#include <VortexTypes.h>
+#include "VortexImageDescriptor.h"
+
+typedef struct st_block_norm_v1_00_a_mem_config{
+  uint64_t SvmAddr;
+  uint16_t SvmMemId;
+
+  uint16_t SvmFlowId;
+  uint16_t HogFlowId;
+  uint16_t DotpFlowId;
+  uint8_t* GetBytes()
+  {
+    *((uint64_t*)&Bytes[0]) = (
+			       (((uint64_t) SvmAddr & 0xFFFFFFFFFul) << 0) |
+			       (((uint64_t) SvmMemId & 0xFF) << 48));
+    *((uint64_t*)&Bytes[8]) = (
+			       (((uint64_t) SvmFlowId & 0xFFFF) << 0) |
+			       (((uint64_t) HogFlowId & 0xFFFF) << 16) |
+			       (((uint64_t) DotpFlowId & 0xFFFF) << 32) |
+			       (((uint64_t)          0 & 0xFFFF) << 48));
+    return Bytes;
+  } 
+} BlockNormMemConfig;
+
+class block_norm_v1_00_a_mem_config : public IVortexConfiguration
+{
+ public:
+  //block_norm_v1_00_a_mem_config(uint8_t Width, uint8_t Height);
+  block_norm_v1_00_a_mem_config(void);
+  ~block_norm_v1_00_a_mem_config(void);
+	
+  uint64_t GetSvmAddr();
+  void SetSvmAddr(uint64_t value);
+  uint16_t GetSvmMemId();
+  void SetSvmMemId(uint16_t value);
+  
+  uint16_t GetSvmFlowId();
+  void SetSvmFlowId(uint16_t value);
+  uint16_t GetHogFlowId();
+  void SetHogFlowId(uint16_t value);
+  uint16_t GetDotpFlowId();
+  void SetDotpFlowId(uint16_t value);
+  
+  VortexEntityType GetConfigurationType();
+  void SetConfigurationType(VortexEntityType ConfigType);
+  uint64_t GetIndex();
+  void SetIndex(uint64_t Index);
+  VortexConfigurationPacket* GetConfiguration();
+
+ private:
+  VortexConfigurationPacket* m_Vcp;
+  BlockNormMemConfig m_config;
+};
+
+#endif // !1

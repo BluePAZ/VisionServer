@@ -1,0 +1,62 @@
+#include "block_norm_v1_00_a_out_addr_descriptor.h"
+
+
+block_norm_v1_00_a_out_addr_descriptor::block_norm_v1_00_a_out_addr_descriptor(void)
+{
+  m_config.NormAddr = 0;
+  m_config.NormMemId = 0;
+  m_config.DotpAddr = 0;
+  m_config.DotpMemId = 0;
+  
+  m_Vcp = new VortexConfigurationPacket();
+}
+
+block_norm_v1_00_a_out_addr_descriptor::~block_norm_v1_00_a_out_addr_descriptor(void)
+{
+	delete(m_Vcp);
+}
+
+uint64_t block_norm_v1_00_a_out_addr_descriptor::GetNormAddr(){
+  return m_config.NormAddr;
+}
+void block_norm_v1_00_a_out_addr_descriptor::SetNormAddr(uint64_t value){
+  m_config.NormAddr = value;
+}
+
+uint16_t block_norm_v1_00_a_out_addr_descriptor::GetNormMemId(){
+  return m_config.NormMemId;
+}
+void block_norm_v1_00_a_out_addr_descriptor::SetNormMemId(uint16_t value){
+  m_config.NormMemId = value;
+}
+
+uint64_t block_norm_v1_00_a_out_addr_descriptor::GetDotpAddr(){
+  return m_config.DotpAddr;
+}
+void block_norm_v1_00_a_out_addr_descriptor::SetDotpAddr(uint64_t value){
+  m_config.DotpAddr = value;
+}
+
+uint16_t block_norm_v1_00_a_out_addr_descriptor::GetDotpMemId(){
+  return m_config.DotpMemId;
+}
+void block_norm_v1_00_a_out_addr_descriptor::SetDotpMemId(uint16_t value){
+  m_config.DotpMemId = value;
+}
+
+VortexConfigurationPacket* block_norm_v1_00_a_out_addr_descriptor::GetConfiguration()
+{
+	m_Vcp->Clear();
+	m_Vcp->Add(m_config.GetBytes(),16);
+
+	return m_Vcp;
+}
+
+VortexEntityType block_norm_v1_00_a_out_addr_descriptor::GetConfigurationType()
+{
+	return VortexEntityType::SAP;
+}
+
+void block_norm_v1_00_a_out_addr_descriptor::SetConfigurationType(VortexEntityType Type)
+{
+}

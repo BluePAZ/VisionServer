@@ -1,0 +1,27 @@
+﻿  VortexVariable.cpp
+  VortexTransferDescriptor.cpp
+  VortexRemoteDescriptorConfiguration.cpp
+  VortexOperatorLinkConfiguration.cpp
+  VortexOperatorLink.cpp
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexoperatorlink.cpp(15): warning C4018: '<' : signed/unsigned mismatch
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexoperatorlink.cpp(33): warning C4018: '>' : signed/unsigned mismatch
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexoperatorlink.cpp(49): warning C4018: '<' : signed/unsigned mismatch
+  VortexMessage.cpp
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexmessage.cpp(125): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+  VortexMemoryAllocation.cpp
+  VortexImageDescriptor.cpp
+  VortexGenericConfiguration.cpp
+  VortexDeviceAddress.cpp
+  VortexDescriptorConfiguration.cpp
+  VortexConfigurationPacket.cpp
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexconfigurationpacket.cpp(100): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexconfigurationpacket.cpp(105): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+  VortexConfigurationGroup.cpp
+g:\research\realm_capi\software\vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\src\vortexconfigurationgroup.cpp(80): warning C4018: '<' : signed/unsigned mismatch
+  VortexAcceleratorEnvironment.cpp
+  IVortexNIFSAP.cpp
+  IVortexConfiguration.cpp
+  Generating Code...
+  vortex_infrastructure_v3_00_a.vcxproj -> G:\Research\ReALM_CAPI\software\Vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\vs\Debug\vortex_infrastructure_v3_00_a.lib

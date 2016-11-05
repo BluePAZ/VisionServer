@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="aim_engine_v1_00_a" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_sim">
+				<Option output="aim_engine_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;libhistogram_v3_00_a.a;libconvolution_v1_00_a.a;liblinear_interpolator_v1_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../../../sop/operator/linear_interpolator_v1_00_a/include" />
+					<Add directory="../../../sop/operator/histogram_v3_00_a/include" />
+					<Add directory="../../../sop/operator/convolution_v1_00_a/include" />
+					<Add directory="../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add library="libhistogram_v3_00_a.a" />
+					<Add library="libconvolution_v1_00_a.a" />
+					<Add library="liblinear_interpolator_v1_00_a.a" />
+					<Add directory="../../../sop/operator/convolution_v1_00_a/vs" />
+					<Add directory="../../../sop/operator/histogram_v3_00_a/vs" />
+					<Add directory="../../../sop/operator/linear_interpolator_v1_00_a/vs" />
+					<Add directory="../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Debug_hw">
+				<Option output="aim_engine_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;libhistogram_v3_00_a.a;libconvolution_v1_00_a.a;liblinear_interpolator_v1_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../../../sop/operator/linear_interpolator_v1_00_a/include" />
+					<Add directory="../../../sop/operator/histogram_v3_00_a/include" />
+					<Add directory="../../../sop/operator/convolution_v1_00_a/include" />
+					<Add directory="../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add library="libhistogram_v3_00_a.a" />
+					<Add library="libconvolution_v1_00_a.a" />
+					<Add library="liblinear_interpolator_v1_00_a.a" />
+					<Add directory="../../../sop/operator/convolution_v1_00_a/vs" />
+					<Add directory="../../../sop/operator/histogram_v3_00_a/vs" />
+					<Add directory="../../../sop/operator/linear_interpolator_v1_00_a/vs" />
+					<Add directory="../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="aim_engine_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option external_deps=";;;;" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Unit filename="../include/AIMConfigurationList.h" />
+		<Unit filename="../include/AIMGaborKernel.h" />
+		<Unit filename="../include/AIMNotificationConfig.h" />
+		<Unit filename="../include/AIMOpcodeConfig.h" />
+		<Unit filename="../include/AIMProcessorConfig.h" />
+		<Unit filename="../include/AIMTestData.h" />
+		<Unit filename="../include/aim_engine_v1_00_a.h" />
+		<Unit filename="../src/AIMConfigurationList.cpp" />
+		<Unit filename="../src/AIMGaborKernel.cpp" />
+		<Unit filename="../src/AIMNotificationConfig.cpp" />
+		<Unit filename="../src/AIMOpcodeConfig.cpp" />
+		<Unit filename="../src/AIMProcessorConfig.cpp" />
+		<Unit filename="../src/AIMTestData.cpp" />
+		<Unit filename="../src/aim_engine_v1_00_a.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

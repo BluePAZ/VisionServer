@@ -1,0 +1,76 @@
+#include "block_norm_v1_00_a_mem_descriptor.h"
+
+
+block_norm_v1_00_a_mem_descriptor::block_norm_v1_00_a_mem_descriptor(void)
+{
+  m_config.SvmAddr = 0;
+  m_config.SvmMemID = 0;
+  
+  m_config.SvmFlowID = 0;
+  m_config.HogFlowID = 0;
+  m_config.DotpFlowID = 0;
+  m_Vcp = new VortexConfigurationPacket();
+}
+
+block_norm_v1_00_a_mem_descriptor::~block_norm_v1_00_a_mem_descriptor(void)
+{
+	delete(m_Vcp);
+}
+
+uint64_t block_norm_v1_00_a_mem_descriptor::GetSvmAddr(){
+  return m_config.SvmAddr;
+}
+void block_norm_v1_00_a_mem_descriptor::SetSvmAddr(uint64_t value){
+  m_config.SvmAddr = value;
+}
+
+uint16_t block_norm_v1_00_a_mem_descriptor::GetSvmMemID(){
+  return m_config.SvmMemID;
+}
+void block_norm_v1_00_a_mem_descriptor::SetSvmMemID(uint16_t value){
+  m_config.SvmMemID = value;
+}
+
+
+uint16_t block_norm_v1_00_a_mem_descriptor::GetSvmFlowID(){
+  return m_config.SvmFlowID;
+}
+void block_norm_v1_00_a_mem_descriptor::SetSvmFlowID(uint16_t value){
+  m_config.SvmFlowID = value;
+}
+
+uint16_t block_norm_v1_00_a_mem_descriptor::GetHogFlowID(){
+  return m_config.HogFlowID;
+}
+void block_norm_v1_00_a_mem_descriptor::SetHogFlowID(uint16_t value){
+  m_config.HogFlowID = value;
+}
+
+uint16_t block_norm_v1_00_a_mem_descriptor::GetDotpFlowID(){
+  return m_config.DotpFlowID;
+}
+void block_norm_v1_00_a_mem_descriptor::SetDotpFlowID(uint16_t value){
+  m_config.DotpFlowID = value;
+}
+
+
+void block_norm_v1_00_a_mem_descriptor::SetConfigurationType(VortexEntityType Type)
+{
+}
+
+VortexConfigurationPacket* block_norm_v1_00_a_mem_descriptor::GetConfiguration()
+{
+	m_Vcp->Clear();
+	m_Vcp->Add(m_config.GetBytes(),16);
+
+	return m_Vcp;
+}
+
+VortexEntityType block_norm_v1_00_a_mem_descriptor::GetConfigurationType()
+{
+	return VortexEntityType::SAP;
+}
+
+void block_norm_v1_00_a_mem_descriptor::SetConfigurationType(VortexEntityType Type)
+{
+}

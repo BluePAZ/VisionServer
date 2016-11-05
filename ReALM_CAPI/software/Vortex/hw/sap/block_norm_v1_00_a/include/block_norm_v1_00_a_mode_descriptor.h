@@ -1,0 +1,101 @@
+#ifndef __block_norm_V1_00_A_MODE_CONFIG_H__
+#define __block_norm_V1_00_A_MODE_CONFIG_H__
+
+#include <VortexTypes.h>
+#include "VortexImageDescriptor.h"
+
+
+class block_norm_v1_00_a_mode_descriptor 
+{
+ public:
+typedef struct st_block_norm_v1_00_a_mode_descriptor{
+  uint8_t Mode; // upper 4bit=NormOutMode in c#
+//  uint8_t NormOutMode;
+  uint8_t CellPixWidth;
+  uint8_t CellPixHeight;
+  uint8_t BinNum;
+  uint16_t ScaleAdj;
+  uint8_t ScaleCst;
+  uint8_t ProjShift;
+  uint8_t TextScale;
+	
+  uint8_t NormMax;
+  uint8_t NormAdjust;
+  uint8_t FlipEn;
+  uint8_t RoiWidthInCell;
+  uint8_t RoiHeightInCell;
+
+  uint8_t Bytes[16];
+
+  uint8_t* GetBytes()
+  {
+    *((uint64_t*)&Bytes[0]) = (
+			       // [31:0]
+//			       (((uint64_t) (Mode | (NormOutMode << 4)) &   0xFF) << 0) |
+					(((uint64_t)                       Mode & 0xFF) << 0) |
+			       (((uint64_t)               CellPixWidth  &   0xFF) << 8) |
+			       (((uint64_t)              CellPixHeight  &   0xFF) << 16) |
+			       (((uint64_t)                      BinNum &   0xFF) << 24) |
+			       // [63:32]
+			       (((uint64_t)                    ScaleAdj & 0xFFFF) << 32) |
+			       (((uint64_t)                    ScaleCst &   0xFF) << 48) |
+			       (((uint64_t)                   ProjShift &   0xFF) << 56)
+			       );
+    *((uint64_t*)&Bytes[8]) = (
+			       // [95:64]
+			       (((uint64_t)                   TextScale & 0xFF) <<  0) |
+			       (((uint64_t)                     NormMax & 0xFF) <<  8) | 
+			       (((uint64_t)                  NormAdjust & 0xFF) << 16) |
+			       (((uint64_t)                      FlipEn & 0xFF) << 24) |
+			       // [127:96]
+			       (((uint64_t)              RoiWidthInCell & 0xFF) << 32) |
+			       (((uint64_t)                        0x00 & 0xFF) << 40) |
+			       (((uint64_t)             RoiHeightInCell & 0xFF) << 48) |
+			       (((uint64_t)                        0x00 & 0xFF) << 56));   
+    return Bytes;
+  }
+} PayloadT;
+public:
+	//block_norm_v1_00_a_mode_descriptor(uint8_t Width, uint8_t Height);
+	block_norm_v1_00_a_mode_descriptor(void);
+	~block_norm_v1_00_a_mode_descriptor(void);
+
+	uint8_t GetMode();
+	void SetMode(uint8_t value);
+
+/*	uint8_t GetNormOutMode();
+	void SetNormOutMode(uint8_t value);*/
+	uint8_t GetCellPixWidth();
+	void SetCellPixWidth(uint8_t value);
+	uint8_t GetCellPixHeight();
+	void SetCellPixHeight(uint8_t value);
+	uint8_t GetBinNum();
+	void SetBinNum(uint8_t value);
+	uint16_t GetScaleAdj();
+	void SetScaleAdj(uint16_t value);
+	uint8_t GetScaleCst();
+	void SetScaleCst(uint8_t value);
+	uint8_t GetProjShift();
+	void SetProjShift(uint8_t value);
+	uint8_t GetTextScale();
+	void SetTextScale(uint8_t value);
+
+	uint8_t GetNormMax();
+	void SetNormMax(uint8_t value);
+	uint8_t GetNormAdjust();
+	void SetNormAdjust(uint8_t value);
+	uint8_t GetFlipEn();
+	void SetFlipEn(uint8_t value);
+	uint8_t GetRoiWidthInCell();
+	void SetRoiWidthInCell(uint8_t value);
+	uint8_t GetRoiHeightInCell();
+	void SetRoiHeightInCell(uint8_t value);
+
+	uint8_t IsNormalizeOut() { return ( (m_payload.Mode & 0x1)!=0?  1: 0 ); }
+	uint8_t IsDotpOut(){ return ( (m_payload.Mode & 0x2)!=0?  1: 0 ); }
+  uint8_t* GetBytes();
+private:
+	PayloadT m_payload;
+};
+
+#endif // !1

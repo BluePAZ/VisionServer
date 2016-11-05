@@ -1,0 +1,6 @@
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\bin\Debug\DataSplitter.exe.config
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\bin\Debug\DataSplitter.exe
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\bin\Debug\DataSplitter.pdb
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\obj\Debug\DataSplitter.csprojResolveAssemblyReference.cache
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\obj\Debug\DataSplitter.exe
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\DataSplitter\obj\Debug\DataSplitter.pdb

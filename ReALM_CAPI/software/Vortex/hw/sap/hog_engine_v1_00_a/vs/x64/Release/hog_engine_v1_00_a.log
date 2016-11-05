@@ -1,0 +1,29 @@
+﻿Build started 1/22/2016 4:23:44 PM.
+     1>Project "R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\hog_engine_v1_00_a.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IR:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\include /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt ..\src\hog_engine_v1_00_a.cpp ..\src\hog_engine_v1_00_a_configuration_list.cpp ..\src\hog_engine_v1_00_a_controller_config.cpp ..\src\hog_engine_v1_00_a_convolution_kernel_config.cpp ..\src\hog_engine_v1_00_a_histogram_minmax_config.cpp ..\src\hog_engine_v1_00_a_histogram_pagetable_config.cpp ..\src\hog_engine_v1_00_a_notification_config.cpp ..\src\hog_engine_v1_00_a_convolution_image_config.cpp ..\src\hog_engine_v1_00_a_histogram_image_config.cpp ..\src\hog_engine_v1_00_a_opcode_config.cpp
+         hog_engine_v1_00_a.cpp
+     1>..\src\hog_engine_v1_00_a.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_configuration_list.cpp
+     1>..\src\hog_engine_v1_00_a_configuration_list.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_controller_config.cpp
+     1>..\src\hog_engine_v1_00_a_controller_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_convolution_kernel_config.cpp
+     1>..\src\hog_engine_v1_00_a_convolution_kernel_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_histogram_minmax_config.cpp
+     1>..\src\hog_engine_v1_00_a_histogram_minmax_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_histogram_pagetable_config.cpp
+     1>..\src\hog_engine_v1_00_a_histogram_pagetable_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_notification_config.cpp
+     1>..\src\hog_engine_v1_00_a_notification_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_convolution_image_config.cpp
+     1>..\src\hog_engine_v1_00_a_convolution_image_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_histogram_image_config.cpp
+     1>..\src\hog_engine_v1_00_a_histogram_image_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+         hog_engine_v1_00_a_opcode_config.cpp
+     1>..\src\hog_engine_v1_00_a_opcode_config.cpp : fatal error C1041: cannot open program database 'r:\ska130\repos\realm_capi\software\vortex\hw\sap\hog_engine_v1_00_a\vs\x64\release\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+     1>Done Building Project "R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\hog_engine_v1_00_a.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.78

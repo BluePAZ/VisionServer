@@ -1,0 +1,29 @@
+﻿Build started 11/29/2015 1:38:50 PM.
+     1>Project "R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\hog_engine_v1_00_a.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IR:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\vcores\cores\vortex_infrastructure_v3_00_a\include /IR:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\\..\include /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ..\src\hog_engine_v1_00_a.cpp
+         hog_engine_v1_00_a.cpp
+     1>..\src\hog_engine_v1_00_a.cpp(211): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
+     1>..\src\hog_engine_v1_00_a.cpp(289): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\src\hog_engine_v1_00_a.cpp(310): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\src\hog_engine_v1_00_a.cpp(321): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>..\src\hog_engine_v1_00_a.cpp(347): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
+     1>..\src\hog_engine_v1_00_a.cpp(370): warning C4244: '=' : conversion from 'uint64_t' to 'int', possible loss of data
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\\..\library\hog_engine_v1_00_a.lib" /NOLOGO /MACHINE:X64 x64\Debug\hog_engine_v1_00_a.obj
+         x64\Debug\hog_engine_v1_00_a_configuration_list.obj
+         x64\Debug\hog_engine_v1_00_a_controller_config.obj
+         x64\Debug\hog_engine_v1_00_a_convolution_kernel_config.obj
+         x64\Debug\hog_engine_v1_00_a_histogram_minmax_config.obj
+         x64\Debug\hog_engine_v1_00_a_histogram_pagetable_config.obj
+         x64\Debug\hog_engine_v1_00_a_notification_config.obj
+         x64\Debug\hog_engine_v1_00_a_convolution_image_config.obj
+         x64\Debug\hog_engine_v1_00_a_histogram_image_config.obj
+         x64\Debug\hog_engine_v1_00_a_opcode_config.obj
+         hog_engine_v1_00_a.vcxproj -> R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\\..\library\hog_engine_v1_00_a.lib
+     1>Done Building Project "R:\ska130\Repos\ReALM_CAPI\software\Vortex\hw\sap\hog_engine_v1_00_a\vs\hog_engine_v1_00_a.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.40

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="nif_capi_v2_00_b" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_sim">
+				<Option output="nif_capi_v2_00_b" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../include" />
+					<Add directory="../../vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../pslse-master/pslse" />
+				</Compiler>
+				<Linker>
+					<Add library="libcxl.a" />
+					<Add directory="../pslse-master/pslse" />
+				</Linker>
+			</Target>
+			<Target title="Debug_hw">
+				<Option output="nif_capi_v2_00_b" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../include" />
+					<Add directory="../../vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../pslse-master/libcxl" />
+				</Compiler>
+				<Linker>
+					<Add library="libcxl.a" />
+					<Add directory="../pslse-master/libcxl" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="nif_capi_v2_00_b" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Unit filename="../include/cxl_wrapper.h" />
+		<Unit filename="../include/nif_capi_v2_00_b.h" />
+		<Unit filename="../src/cxl_wrapper.cpp" />
+		<Unit filename="../src/nif_capi_v2_00_b.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

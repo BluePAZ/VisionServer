@@ -1,0 +1,154 @@
+#include "block_norm_v1_00_a_mode_config.h"
+
+
+block_norm_v1_00_a_mode_config::block_norm_v1_00_a_mode_config(void)
+{
+  m_config.Mode = 0;
+  m_config.NormOutMode = 0;
+  m_config.CellPixWidth = 0;
+  m_config.CellPixHeight = 0;
+  m_config.BinNum = 0;
+  m_config.ScaleAdj = 0;
+  m_config.ScaleCst = 0;
+  m_config.ProjShift = 0;
+  m_config.TextScale = 0;
+	
+  m_config.NormMax = 0;
+  m_config.NormAdjust = 0;
+  m_config.FlipEn = 0;
+  m_config.RoiWidthInCell = 0;
+  m_config.RoiHeightInCell = 0;
+
+  m_Vcp = new VortexConfigurationPacket();
+}
+
+block_norm_v1_00_a_mode_config::~block_norm_v1_00_a_mode_config(void)
+{
+	delete(m_Vcp);
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetNormOutMode(){
+  return m_config.NormOutMode;
+}
+
+void block_norm_v1_00_a_mode_config::SetNormOutMode(uint8_t value){
+  m_config.NormOutMode = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetCellPixWidth(){
+  return m_config.CellPixWidth;
+}
+
+void block_norm_v1_00_a_mode_config::SetCellPixWidth(uint8_t value){
+  m_config.CellPixWidth = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetCellPixHeight(){
+  return m_config.CellPixHeight;
+}
+
+void block_norm_v1_00_a_mode_config::SetCellPixHeight(uint8_t value){
+  m_config.CellPixHeight = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetBinNum(){
+  return m_config.BinNum;
+}
+
+void block_norm_v1_00_a_mode_config::SetBinNum(uint8_t value){
+  m_config.BinNum = value;
+}
+
+uint16_t block_norm_v1_00_a_mode_config::GetScaleAdj(){
+  return m_config.ScaleAdj;
+}
+
+void block_norm_v1_00_a_mode_config::SetScaleAdj(uint16_t value){
+  m_config.ScaleAdj = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetScaleCst(){
+  return m_config.ScaleCst;
+}
+
+void block_norm_v1_00_a_mode_config::SetScaleCst(uint8_t value){
+  m_config.ScaleCst = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetProjShift(){
+  return m_config.ProjShift;
+}
+
+void block_norm_v1_00_a_mode_config::SetProjShift(uint8_t value){
+  m_config.ProjShift = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetTextScale(){
+  return m_config.TextScale;
+}
+
+void block_norm_v1_00_a_mode_config::SetTextScale(uint8_t value){
+  m_config.TextScale = value;
+}
+
+
+uint8_t block_norm_v1_00_a_mode_config::GetNormMax(){
+  return m_config.NormMax;
+}
+
+void block_norm_v1_00_a_mode_config::SetNormMax(uint8_t value){
+  m_config.NormMax = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetNormAdjust(){
+  return m_config.NormAdjust;
+}
+
+void block_norm_v1_00_a_mode_config::SetNormAdjust(uint8_t value){
+  m_config.NormAdjust = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetFlipEn(){
+  return m_config.FlipEn;
+}
+
+void block_norm_v1_00_a_mode_config::SetFlipEn(uint8_t value){
+  m_config.FlipEn = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetRoiWidthInCell(){
+  return m_config.RoiWidthInCell;
+}
+
+void block_norm_v1_00_a_mode_config::SetRoiWidthInCell(uint8_t value){
+  m_config.RoiWidthInCell = value;
+}
+
+uint8_t block_norm_v1_00_a_mode_config::GetRoiHeightInCell(){
+  return m_config.RoiHeightInCell;
+}
+
+void block_norm_v1_00_a_mode_config::SetRoiHeightInCell(uint8_t value){
+  m_config.RoiHeightInCell = value;
+}
+
+void block_norm_v1_00_a_mode_config::SetConfigurationType(VortexEntityType Type)
+{
+}
+
+VortexConfigurationPacket* block_norm_v1_00_a_mode_config::GetConfiguration()
+{
+	m_Vcp->Clear();
+	m_Vcp->Add(m_config.GetBytes(),16);
+
+	return m_Vcp;
+}
+
+VortexEntityType block_norm_v1_00_a_mode_config::GetConfigurationType()
+{
+	return VortexEntityType::SAP;
+}
+
+void block_norm_v1_00_a_mode_config::SetConfigurationType(VortexEntityType Type)
+{
+}

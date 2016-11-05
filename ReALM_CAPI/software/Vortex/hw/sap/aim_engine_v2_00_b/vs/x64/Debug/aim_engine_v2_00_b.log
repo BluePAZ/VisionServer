@@ -1,0 +1,18 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(346,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  aim_engine_v2_00_b.cpp
+..\src\aim_engine_v2_00_b.cpp(175): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(214): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(215): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(216): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(267): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(278): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(289): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(315): warning C4244: 'initializing' : conversion from 'uint64_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(334): warning C4244: '=' : conversion from 'uint64_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(697): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(698): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(725): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(726): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(749): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+..\src\aim_engine_v2_00_b.cpp(750): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+  aim_engine_v2_00_b.vcxproj -> G:\Research\ReALM_CAPI\software\Vortex\hw\sap\aim_engine_v2_00_b\vs\\..\library\aim_engine_v2_00_b.lib

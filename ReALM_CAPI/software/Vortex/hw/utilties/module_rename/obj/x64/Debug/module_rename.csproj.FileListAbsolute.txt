@@ -1,0 +1,6 @@
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\bin\x64\Debug\module_rename.exe.config
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\bin\x64\Debug\module_rename.exe
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\bin\x64\Debug\module_rename.pdb
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\obj\x64\Debug\module_rename.csprojResolveAssemblyReference.cache
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\obj\x64\Debug\module_rename.exe
+G:\Research\ReALM_CAPI\software\Vortex\hw\utilties\module_rename\obj\x64\Debug\module_rename.pdb

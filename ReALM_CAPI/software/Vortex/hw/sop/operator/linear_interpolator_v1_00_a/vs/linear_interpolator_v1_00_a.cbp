@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="linear_interpolator_v1_00_a" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug_sim">
+				<Option output="linear_interpolator_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Debug_hw">
+				<Option output="linear_interpolator_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option external_deps="libvortex_infrastructure_v3_00_a.a;" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/include" />
+					<Add directory="../include" />
+				</Compiler>
+				<Linker>
+					<Add library="libvortex_infrastructure_v3_00_a.a" />
+					<Add directory="../../../../vcores/cores/vortex_infrastructure_v3_00_a/vs" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="linear_interpolator_v1_00_a" prefix_auto="1" extension_auto="1" />
+				<Option external_deps=";" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Unit filename="../include/CoefficientTableEntry.h" />
+		<Unit filename="../include/InterpolationRange.h" />
+		<Unit filename="../include/InterpolationRangeGroup.h" />
+		<Unit filename="../include/RangeTableEntry.h" />
+		<Unit filename="../include/linear_interpolator_v1_00_a.h" />
+		<Unit filename="../src/CoefficientTableEntry.cpp" />
+		<Unit filename="../src/InterpolationRange.cpp" />
+		<Unit filename="../src/InterpolationRangeGroup.cpp" />
+		<Unit filename="../src/RangeTableEntry.cpp" />
+		<Unit filename="../src/linear_interpolator_v1_00_a.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
